@@ -1,0 +1,136 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins' as m ;
+
+
+.three-flat{
+    padding: 100px 0px 100px;
+
+    .container-xl{
+
+
+        .three-flat-title{
+            margin-bottom: 40px;
+            text-align: center;
+
+            > div{
+                color: #ED2027 ;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+            }
+            h4{
+                margin-top: 4px ;
+                font-size: 36px;
+                line-height: 44px;
+                font-weight: 600;
+                color: #161e2d;
+            }
+        }
+
+        .three-flat-row{
+            display: flex;
+
+            .flat-box{
+
+                display: flex;
+                gap: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .box-style{
+
+                    width: calc((1290px - 30px) / 3);
+                    align-items: center;
+                    padding: 40px 30px;
+                    border-radius: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .icon-box{
+
+                        img{
+                            width: 90px;
+                            height: 80px;
+                            transition: transform 0.8s;
+                            transform-style: preserve-3d;
+                        }
+                    
+                    }
+
+                    .content{
+                        text-align: center;
+
+                        h6{
+                            font-size: 24px;
+                            line-height: 30px;
+                            font-weight: 600;
+                            color: #161e2d;
+                        }
+
+                        p{
+                            margin-top: 12px;
+                            font-size: 16px;
+                            line-height: 26px;
+                            color: #5c6368;
+                            margin-bottom: 20px;
+                        }
+
+                        a{
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            border-radius: 4px;
+                            background-color: #ffffff;
+                            color: #161e2d;
+                            border: 1px solid #161e2d;
+                            font-size: 16px;
+                            line-height: 26px;
+                            font-weight: 700;
+                            text-align: center;
+                            transition: all 0.3s ease-in-out;
+                            
+                        }
+                    }
+
+                    
+                }
+
+                .box-style:hover{
+                    background-color: #f7f7f7;
+                }
+
+                .box-style:hover .content > a{
+
+                    background-color: v.$button-bg-color;
+                    border: transparent;
+                    color: white;
+                }
+
+                .box-style:hover .icon-box > img{
+                    transform: rotateY(360deg);
+                }
+
+                >div:nth-child(2){
+
+                    background-color: #f7f7f7;
+
+                    .content{
+
+                        a{
+                            background-color: #ED2027;
+                            color: #ffffff;
+                            border-color: #ED2027;
+                        }
+
+                    }
+
+                   
+                }
+            }
+
+        }
+    }
+
+}

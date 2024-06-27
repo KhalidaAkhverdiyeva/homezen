@@ -1,0 +1,190 @@
+.agents-section{
+    padding: 100px 0px 100px;
+    background-color: #f7f7f7;
+
+    .agentBox-title{
+        margin-bottom: 30px;
+
+        .teams{
+            color: #ED2027;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+
+        }
+        h4{
+            margin-top: 4px;
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: 600;
+            color: #161e2d;
+
+        }
+
+    }
+    
+    .agents{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+
+        .agent {
+            width: calc((1290px - 30px) / 2 );
+            display: flex;
+            gap: 21px;
+            flex-direction: row;
+            align-items: center;
+            gap: 0px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+
+            .agent-img{
+                overflow: hidden;
+                display: flex;
+                position: relative;
+                width: 70%;
+
+                img{
+                    width: 100%;
+                    object-fit: cover !important;
+                    max-width: 100%;
+                    height: auto;
+                    transition: all 0.4s ease-in-out;
+
+                }
+                .overlay{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(1, 0, 0, 0.5);
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                    z-index: 67;
+                    color: rgb(180, 175, 175);
+                    display: flex;
+
+                    .socials{
+                        position: absolute;
+                        bottom: 35px;
+                        left: 70px;
+                        background-color: white;
+                        display: flex;
+                        padding: 10px;
+                        border-radius: 10px;
+                        transition: height 0.3s ease;
+                        background-color: #ffffff;
+                        transform: translateY(100%); 
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                        opacity: 0;
+
+                        > div {
+                            padding: 5px 20px;
+                            border-right: 1px solid #e3e3e3;
+                        }
+                        > div:last-child{
+                            border-right: transparent 1px solid;
+                        }
+
+                        >div:hover > i {
+                            color: #ED2027;
+                        }
+                        
+                    }
+
+
+                }
+                
+
+            }
+            
+
+            .content{
+                padding: 30px;
+                height: 100%;
+
+
+                h6{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 600;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-top: 4px;
+                    color: #5c6368;
+                    font-weight: 400;
+                }
+
+                ul{
+                    margin-top: 16px;
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    font-size: 18px;
+
+                    li{
+                        margin-bottom: 12px;
+                        display: flex;
+                        gap: 8px;
+
+                        span {
+                            font-weight: 300;
+                        }
+
+                        i{
+                            color: #5c6368;
+                        }
+                        
+
+
+
+                    }
+
+                   
+                }
+                a{
+                    margin-top: 30px;
+                    padding: 15px 32px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 700;
+                    text-align: center;
+                    border-radius: 4px;
+                    background-color: #ffffff;
+                    color: #161e2d;
+                    border: 1px solid #161e2d;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                }
+
+
+            }
+        }
+
+
+        .agent:hover .content > a {
+            background-color: #ED2027;
+            border: transparent;
+            color: white;
+
+        }
+        .agent:hover .agent-img > img {
+            transform: scale(1.1);
+        }
+        .agent:hover .agent-img > .overlay{
+            opacity: 1;
+        }
+        .agent:hover .overlay > .socials {
+            transform: translateY(0);
+            opacity: 1;
+
+        }
+    }
+}

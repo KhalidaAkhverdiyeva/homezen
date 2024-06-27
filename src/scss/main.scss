@@ -1,0 +1,32 @@
+@forward 'base/reset';
+
+
+@forward 'layout/grid';
+@forward 'layout/header';
+@forward 'layout/hero';
+@forward 'layout/flat-section';
+@forward 'layout/city-section';
+@forward 'layout/flat-category-section';
+@forward 'layout/agents-section';
+@forward 'layout/latest-section';
+@forward 'layout/footer';
+@forward 'layout/3flat';
+@forward 'layout/comments-section';
+
+
+@forward 'utils/variables';
+@forward 'utils/mixins';
+
+
+@forward 'component/buttons';
+@forward 'component/card';
+
+section{
+    opacity: 0;
+    transform: translateY(2px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,44 @@
+@use '../utils/mixins' as m;
+
+
+.flat-section{
+    padding-bottom: 100px;
+
+
+    .flat-section-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        >div:first-child{
+            @extend .flat-section-top;
+
+    
+            >div:first-child{
+             color: #ED2027;
+             font-size: 14px;
+             line-height: 24px;
+             font-weight: 600;
+             
+            }
+            >div:last-child{
+             font-size: 36px;
+             line-height: 44px;
+             font-weight: 600;
+            }
+         }
+
+    }
+
+    .flat-section-bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            @include m.redButton()
+
+        }
+    }
+
+   
+}

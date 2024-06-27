@@ -1,0 +1,228 @@
+@use '../utils/mixins' as m ;
+@use '../utils/variables' as v ;
+
+
+
+.city-section{
+    padding: 100px 0px 100px;
+
+    .container-xl{
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .box-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+
+            .box-title-left{
+
+                .city-title{
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                    color: #ed2027 !important;
+                }
+                h4{
+                    font-size: 36px;
+                    line-height: 44px;
+                    font-weight: 600;
+                }
+            }
+
+            .box-title-right{
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+
+
+                button{
+
+                    @include m.redButton();
+
+                }
+
+               
+
+                >span:first-child{
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 600;
+                    color: #161e2d;
+                    position: relative;
+                }
+
+                >span:first-child::before{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #ED2027;
+                }
+                >span:last-child{
+
+                    i{
+                        color: #ED2027;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+        button{
+            @include m.redButton();
+            width: 100%;
+            cursor: pointer;
+        }
+
+
+        .closeBtn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          .closeBtn:hover,
+          .closeBtn:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+      }
+
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0px;
+
+
+        label{
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            color: #161e2d;
+
+        }
+
+        input{
+            font-size: 18px;
+            line-height: 28px;
+            padding: 10px 16px;
+            padding-right: 40px;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+        }
+
+      }
+}
+.modalUpdate{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(210, 245, 197, 0.5);
+
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+        button{
+            @include m.redButton();
+            width: 100%;
+            background-color: green;
+            cursor: pointer;
+        }
+
+
+        .closeBtn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          .closeBtn:hover,
+          .closeBtn:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+      }
+
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0px;
+
+
+        label{
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            color: #161e2d;
+
+        }
+
+        input{
+            font-size: 18px;
+            line-height: 28px;
+            padding: 10px 16px;
+            padding-right: 40px;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+        }
+
+      }
+}

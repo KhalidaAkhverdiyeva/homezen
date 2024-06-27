@@ -1,0 +1,24 @@
+
+@use './variables' as v;
+
+
+@mixin flexbox($display: flex, $direction: null, $justify: null, $align: null,$gap:null) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    
+  }
+
+  @mixin redButton(){
+    border: transparent;
+    padding: 15px 20px;
+    font-size: v.$header-text-size;
+    background: v.$button-bg-color;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+
+  }
+
+

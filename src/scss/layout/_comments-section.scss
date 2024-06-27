@@ -1,0 +1,205 @@
+.comments{
+    padding-bottom: 100px;
+
+    .container-xl{
+
+        .row{
+
+            .col-5{
+                z-index: 1000;
+                position: relative;
+
+                
+                .comment-box-left{
+                    border-top-left-radius: 16px;
+                    border-bottom-left-radius: 16px;
+                    height: 100%;
+                    overflow: hidden;
+    
+                    .image-style{
+    
+                        position: relative;
+    
+                        img{
+                            width: 100%;
+                            height: auto;
+                            transform: scale(1);
+                            vertical-align: middle;
+                        }
+
+                        
+                        h4{
+                            position: absolute;
+                            z-index: 12;
+                            bottom: 24px;
+                            left: 40px;
+                            right: 60px;
+                            font-weight: 600;
+                            font-size: 36px;
+                            line-height: 44px;
+                            color: white;
+                        }
+                    }
+                    .content-box{
+                        width: 100%;
+                        padding: 30px 40px 40px;
+                        background-color: #161e2d;
+                        height: 100%;
+    
+                        p{
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;
+                            color: white;
+                            margin-bottom: 25px;
+                        }
+                        a {
+                            background-color: #ED2027;
+                            color: white !important;
+                            border-color: #ED2027;
+                            border-radius: 4px;
+                            font-size: 16px;
+                            line-height: 26px;
+                            font-weight: 700;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 16px 32px;
+                        }
+                    }
+                }
+
+            }
+
+            .col-7{
+
+                .comment-box-right{
+                    border-top-right-radius: 16px;
+                    border-bottom-right-radius: 16px;
+                    overflow: hidden;
+                    background-color: #f7f7f7;
+                    height: 100%;
+                    margin-left: -30px;
+
+
+                    .comment-box-right-inside{
+                        padding: 60px 30px 30px 60px;
+
+                        .right-top{
+
+
+                            .image-style{
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .commentText{
+                                font-size: 30px;
+                                line-height: 42px;
+                                padding-left: 20px;
+                                font-weight: 600;
+                                color: #161e2d;
+                                text-transform: capitalize;
+                                text-align: center;
+                                padding-top: 10px;
+                                transition: all 0.4s ease-in-out;
+                            }
+
+                            // .commentText.hidden {
+                            //     transform: translateX(100%);
+                            //     opacity: 0;
+                            //     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                            //   } 
+
+                            //   .commentText.visible {
+                            //     transform: translateX(0);
+                            //     opacity: 1;
+                            //     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                            //   }
+
+                            .slider-control{
+                                display: flex;
+                                justify-content: center;
+                                padding-top: 15px;
+                                gap: 10px;
+                                 
+                                >div{
+                                    width: 8px;
+                                    height: 8px;
+                                    background-color: #161e2d;
+                                    border-radius: 50%;
+                                }
+                            }
+
+                        }
+                        .right-bottom{
+
+                            .slider{
+                                margin-top: 70px;
+                                // display: flex;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                
+
+                                .slider-track{
+
+                                    display: flex !important;
+                                    width: 200%; 
+                                    animation: scroll 10s linear infinite;
+
+
+                                    .svg-keeper{
+                                        flex: 0 0 auto;
+                                        width: 12.5%;
+    
+                                        // @keyframes slide {
+                                        //     0% {
+                                        //       transform: translateX(0);
+                                        //     }
+                                        //     100% {
+                                        //       transform: translateX(-400%);
+                                        //     }
+                                        //   }
+
+                                          @keyframes scroll {
+                                            0% {
+                                                transform: translateX(0);
+                                            }
+                                            100% {
+                                                transform: translateX(-50%);
+                                            }
+                                        }
+
+
+                                        svg{
+                                            transition: all 0.4s ease-in-out;
+                                        }
+                                        svg:hover path{
+                                            fill: #ED2027;
+                                        }
+                                   
+                                    }
+
+                                }
+
+                                
+                               
+                            }
+                            
+                        }
+
+
+                    }
+
+
+                   
+                }
+            }
+
+            // .col-5:hover {
+
+            // }
+            
+
+           
+        }
+    }
+}
