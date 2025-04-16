@@ -459,9 +459,7 @@ header .main-header nav ul > li:hover ul.homeDropdown {
   font-weight: 400;
   outline: none;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   white-space: nowrap;
   width: 100%;
   border-radius: 8px;
@@ -846,8 +844,7 @@ header .main-header nav ul > li:hover ul.homeDropdown {
 }
 .agents-section .agents .agent .agent-img img {
   width: 100%;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
+  object-fit: cover !important;
   max-width: 100%;
   height: auto;
   transition: all 0.4s ease-in-out;
@@ -994,8 +991,7 @@ header .main-header nav ul > li:hover ul.homeDropdown {
 }
 .latest .content--Box .latestContent a .imageStyle img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 100%;
   height: auto;
   transition: transform 0.4s ease-in-out;
@@ -1613,8 +1609,7 @@ footer .bottomFooter .contentFooter > div:last-child > div {
   margin-top: 12px;
   display: flex;
   align-items: center;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   row-gap: 15px;
   flex-wrap: wrap;
   margin-bottom: 0;
@@ -1656,8 +1651,7 @@ footer .bottomFooter .contentFooter > div:last-child > div {
   align-items: center;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .flat-section-cards .card .card-home .card-archive-bottom .card-archive-bottom-left span {
   display: flex;
@@ -1725,8 +1719,7 @@ footer .bottomFooter .contentFooter > div:last-child > div {
 }
 .cardBox .city-card .cardImage img {
   width: 187px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 100%;
   height: 140px;
   transition: transform 0.3s ease-in-out;
@@ -1805,4 +1798,6 @@ section {
 section.visible {
   opacity: 1;
   transform: translateY(0);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

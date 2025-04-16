@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch db.json"
+    "start": "json-server --watch db.json",
+    "build": "sass src/scss/main.scss src/scss/main.css"
   },
   "keywords": [],
   "author": "",
