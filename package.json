@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server --watch db.json",
-    "prebuild": "if not exist \"public\\css\" mkdir \"public\\css\"",
-    "build": "npx sass src/scss/main.scss:public/css/main.css",
-    "dev": "npm run build && npm start"
+    "build": "npx sass src/scss/main.scss:public/css/main.css"
   },
   "keywords": [],
   "author": "",
