@@ -7,7 +7,7 @@
     "start": "json-server --watch db.json",
     "build": "sass src/scss/main.scss public/css/main.css --no-source-map",
     "dev": "json-server --watch db.json",
-    "vercel-build": "npm run build"
+    "vercel-build": "npx sass src/scss/main.scss public/css/main.css --no-source-map"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,5 @@
   "dependencies": {
     "sass": "^1.86.3",
     "json-server": "^0.16.3"
-
   }
 }
