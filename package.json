@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json",
-    "build": "npx sass src/scss/main.scss:public/css/main.css"
+    "start": "json-server --watch db.json"
   },
   "keywords": [],
   "author": "",
