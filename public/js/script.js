@@ -1,4 +1,3 @@
-
 //FOR SMOOTH LOADING SCROLL
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,20 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = '';
 const cardContainer = document.querySelector('.flat-section-cards');
 const cityBox = document.querySelector('.cardBox');
 
 ///GET DATA FROM APIIII
 async function fetchData(endpoint, cb) {
-
-  const response = await fetch(`${baseUrl}/${endpoint}`);
+  const response = await fetch(`/api/${endpoint}`);
   const data = await response.json();
-
   cb(data);
-
   return data;
-
 }
 
 
@@ -188,18 +183,15 @@ const newCityForm = document.querySelector('.newCityForm');
 submitBtn.addEventListener('click', addNewCity)
 
 async function addNewCity(e) {
-
   console.log('addNewCity function called');
   e.preventDefault();
   const newCityData = {
-
     img: urlInput.value,
     name: cityNameInput.value,
     propNum: propNumInput.value
-
   }
 
-  const response = await fetch(`${baseUrl}/cities`, {
+  const response = await fetch(`/api/cities`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -207,37 +199,29 @@ async function addNewCity(e) {
     body: JSON.stringify(newCityData)
   });
 
-
   const newCity = await response.json();
   const { img, name, propNum } = newCity;
-
 
   const cardElement = document.createElement('div');
   cardElement.classList.add('city-card');
 
-
   cardElement.innerHTML += `
-<div class="city-card">
-            <div class="cardImage">
-              <img
-                src="${img}"
-                alt=""
-              />
-            </div>
-            <div class="cardContent">
-              <h6>${name}</h6>
-              <p>${propNum} properties</p>
-              <a href="">
-                <span>Explore Now</span>
-                <span><i class="fa-solid fa-arrow-right"></i></span>
-              </a>
-           </div>
-  </div> `
+    <div class="city-card">
+      <div class="cardImage">
+        <img src="${img}" alt="" />
+      </div>
+      <div class="cardContent">
+        <h6>${name}</h6>
+        <p>${propNum} properties</p>
+        <a href="">
+          <span>Explore Now</span>
+          <span><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>`
 
   cityBox.appendChild(cardElement)
-
   modal.style.display = 'none';
-
 }
 
 
@@ -255,14 +239,11 @@ cityBox.addEventListener('click', async (event) => {
 
 
 async function cardRemover(cityId, cardElement) {
-
-  const response = await fetch(`${baseUrl}/cities/${cityId}`, {
+  const response = await fetch(`/api/cities/${cityId}`, {
     method: 'DELETE',
   })
-
   cardElement.remove();
   console.log('card was removed')
-
 }
 
 
