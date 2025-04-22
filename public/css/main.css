@@ -277,14 +277,13 @@ header .main-header nav ul > li:hover ul.homeDropdown {
 .hero {
   position: relative;
   height: 700px;
-  margin-top: 130px;
 }
 .hero .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url(https://themesflat.co/html/homzen/images/slider/slider-3.jpg);
   background-size: cover;
   background-position: center;
